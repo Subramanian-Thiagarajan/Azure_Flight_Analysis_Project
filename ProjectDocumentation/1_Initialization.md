@@ -33,3 +33,13 @@ In Owners tab, Add the users who have access to this SPN. Add Client Secret by g
 ![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/44c361db-ed36-4322-a30b-6683b567e7a9)
 
 - Source DataLake with Hierarchial namespace checked while creating the Blob Storage
+
+## 4. SQL Database
+
+![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/c4978c67-b16c-4b58-9788-88915746d9e8)
+
+![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/1bdb512b-9535-40f4-8aa3-15313180ea5a)
+
+- Allow server firewall rules to access the query editor.
+
+
