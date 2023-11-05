@@ -42,4 +42,12 @@ In Owners tab, Add the users who have access to this SPN. Add Client Secret by g
 
 - Allow server firewall rules to access the query editor.
 
+## 5. Azure Data Factory
+
+- Orchestration tool to perform ETL operations
+
+![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/608c35fb-b92f-435b-84aa-8449a472ad8f)
+
+
+
 
