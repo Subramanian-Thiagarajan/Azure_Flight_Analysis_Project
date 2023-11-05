@@ -1,0 +1,14 @@
+{
+	"name": "dev-ADF-fp",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "false"
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "83f8d7ac-b15b-4871-b647-cfa36b899596",
+		"tenantId": "b39434cd-8807-4ea9-9348-a0e7ceadeafc"
+	}
+}

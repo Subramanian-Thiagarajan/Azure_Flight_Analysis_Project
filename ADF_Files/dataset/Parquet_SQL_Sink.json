@@ -1,0 +1,29 @@
+{
+	"name": "Parquet_SQL_Sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS Sink",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileName": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat(split(dataset().fileName,'.')[0],'_Date',formatDateTime(utcNow(),'yyyy-MM-dd'))",
+					"type": "Expression"
+				},
+				"fileSystem": "raw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

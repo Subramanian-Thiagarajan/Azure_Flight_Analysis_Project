@@ -1,0 +1,19 @@
+{
+	"name": "Soruce SQL DB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=sourcedbfp.database.windows.net;Initial Catalog=sourcedb;User ID=fp_admin",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "SourceDBKey"
+			}
+		}
+	}
+}

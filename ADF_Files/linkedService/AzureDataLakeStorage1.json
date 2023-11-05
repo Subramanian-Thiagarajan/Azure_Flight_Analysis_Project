@@ -1,0 +1,22 @@
+{
+	"name": "AzureDataLakeStorage1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sourcedatalakefp.dfs.core.windows.net/",
+			"tenant": "b39434cd-8807-4ea9-9348-a0e7ceadeafc",
+			"servicePrincipalId": "c182c061-e36b-4058-bf4f-c9726129b427",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "dev-spn-secret"
+			}
+		}
+	}
+}
