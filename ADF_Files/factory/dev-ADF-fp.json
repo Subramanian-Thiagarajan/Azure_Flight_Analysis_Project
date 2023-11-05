@@ -2,7 +2,7 @@
 	"name": "dev-ADF-fp",
 	"properties": {
 		"globalConfigurations": {
-			"PipelineBillingEnabled": "true"
+			"PipelineBillingEnabled": "false"
 		}
 	},
 	"location": "eastus",
