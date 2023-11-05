@@ -2,7 +2,7 @@
 	"name": "dev-ADF-fp",
 	"properties": {
 		"globalConfigurations": {
-			"PipelineBillingEnabled": "false",
+			"PipelineBillingEnabled": "true",
 			"factoryStagingLSReferenceName": "AzureDataLakeStorage1",
 			"factoryStagingLSType": "LinkedServiceReference"
 		}
