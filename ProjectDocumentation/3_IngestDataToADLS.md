@@ -29,8 +29,17 @@
 2.2 Create JSON DataSet for file containing metadata of file details
   ![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/bbd63df7-a5f2-427c-bd3f-9c7a61a7989f)
 
+2.3 Zip File Dataset
+   ![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/38cf1b65-22fd-4d46-bee3-13170ee564de)
+
+
 3. Create Pipeline to iterate metadata json and copy files from source to sink
    ![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/2887996f-520b-42c8-bb66-e8d69eefe649)
    ![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/47e606e2-6524-4065-a457-eb1ab19c2543)
    ![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/622adb64-8437-4c67-8db5-ad6b23636754)
+
+
+Debugging Results
+![image](https://github.com/Subramanian-Thiagarajan/Azure_Flight_Analysis_Project/assets/96657323/1cede207-8078-4e0a-88e2-74d4a9a6241b)
+
 
