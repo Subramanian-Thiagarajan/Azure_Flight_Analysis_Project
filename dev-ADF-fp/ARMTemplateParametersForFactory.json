@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dev-ADF-fp"
+		},
+		"Soruce SQL DB_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=sourcedbfp.database.windows.net;Initial Catalog=sourcedb;User ID=fp_admin"
+		},
+		"ADLS Sink_properties_typeProperties_url": {
+			"value": "https://sinkdatalakefp.dfs.core.windows.net/"
+		},
+		"ADLS Sink_properties_typeProperties_tenant": {
+			"value": "b39434cd-8807-4ea9-9348-a0e7ceadeafc"
+		},
+		"ADLS Sink_properties_typeProperties_servicePrincipalId": {
+			"value": "c182c061-e36b-4058-bf4f-c9726129b427"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://sourcedatalakefp.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_tenant": {
+			"value": "b39434cd-8807-4ea9-9348-a0e7ceadeafc"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_servicePrincipalId": {
+			"value": "c182c061-e36b-4058-bf4f-c9726129b427"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://dev-key-vault-fp.vault.azure.net/"
+		}
+	}
+}

@@ -1,0 +1,99 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "dev-ADF-fp"
+		},
+		"Soruce SQL DB_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Soruce SQL DB'",
+			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=sourcedbfp.database.windows.net;Initial Catalog=sourcedb;User ID=fp_admin"
+		},
+		"ADLS Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sinkdatalakefp.dfs.core.windows.net/"
+		},
+		"ADLS Sink_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "b39434cd-8807-4ea9-9348-a0e7ceadeafc"
+		},
+		"ADLS Sink_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "c182c061-e36b-4058-bf4f-c9726129b427"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sourcedatalakefp.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "b39434cd-8807-4ea9-9348-a0e7ceadeafc"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "c182c061-e36b-4058-bf4f-c9726129b427"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://dev-key-vault-fp.vault.azure.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "dev-ADF-fp_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"Soruce SQL DB_connectionString": {
+						"value": "[parameters('Soruce SQL DB_connectionString')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"ADLS Sink_properties_typeProperties_url": {
+						"value": "[parameters('ADLS Sink_properties_typeProperties_url')]"
+					},
+					"ADLS Sink_properties_typeProperties_tenant": {
+						"value": "[parameters('ADLS Sink_properties_typeProperties_tenant')]"
+					},
+					"ADLS Sink_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('ADLS Sink_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_tenant')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_servicePrincipalId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
